@@ -1,0 +1,199 @@
+.carrinho-container { 
+    max-width: 900px; 
+    margin: 40px auto; 
+    background: #1a1a1a; 
+    padding: 30px; 
+    border-radius: 10px; 
+    border: 1px solid #333; 
+}
+
+.carrinho-container h2 { 
+    color: #9c27b0; 
+    margin-bottom: 20px; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+}
+
+th, td { 
+    padding: 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #333; 
+    vertical-align: middle; 
+}
+
+th { 
+    color: #9c27b0; 
+    font-weight: 600; 
+}
+
+td img { 
+    width: 60px !important; 
+    height: 60px !important; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.produto-info { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.btn-remover { 
+    background: transparent; 
+    color: #d32f2f; 
+    border: 1px solid #d32f2f; 
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    font-size: 16px; 
+    transition: 0.3s; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-remover:hover { 
+    background: #d32f2f; 
+    color: #fff; 
+}
+
+.qtd-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0a0a0a;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: fit-content;
+}
+.btn-qtd {
+    background: #333;
+    color: #fff;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-qtd:hover { 
+    background: #9c27b0; 
+}
+.qtd-texto { 
+    min-width: 20px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+/* --- ESTILOS DO CHECKOUT (PAGAMENTO E FRETE) --- */
+.checkout-form {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.checkout-opcoes {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    background: #0a0a0a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.opcao-grupo {
+    flex: 1;
+}
+
+.opcao-grupo h3 {
+    font-size: 16px;
+    color: #9c27b0;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #a0a0a0;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.radio-label:hover {
+    color: #fff;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #9c27b0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* --- TOTAL E AÇÕES --- */
+.total-box { 
+    text-align: right; 
+    font-size: 24px; 
+    margin-top: 20px; 
+    color: #f5f5f5; 
+}
+.total-box span { 
+    color: #9c27b0; 
+    font-weight: bold; 
+}
+.carrinho-vazio { 
+    text-align: center; 
+    color: #666; 
+    padding: 50px; 
+    font-style: italic; 
+}
+.acoes-carrinho {
+    text-align: right;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.btn-continuar {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-continuar:hover {
+    color: #9c27b0;
+}
+.btn-finalizar { 
+    display: inline-block; 
+    background: #4a148c; 
+    color: #fff; 
+    padding: 15px 30px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: 0.3s; 
+}
+.btn-finalizar:hover { 
+    background: #9c27b0; 
+    box-shadow: 0 0 10px #9c27b0; 
+}

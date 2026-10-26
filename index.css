@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #121212;
+    border-bottom: 2px solid #6a1b9a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    text-shadow: 0 0 10px #6a1b9a;
+}
+
+header h1 span {
+    color: #9c27b0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #9c27b0;
+    text-shadow: 0 0 8px #9c27b0;
+}
+
+/* Área Principal */
+main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Banner Hero */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #f5f5f5;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #a0a0a0;
+    font-weight: 300;
+}
+
+/* Seção Vitrine */
+.vitrine h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #9c27b0;
+    margin-bottom: 30px;
+}
+
+/* Grid do Catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 25px;
+}
+
+/* Card de Produto */
+.produto-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.produto-card:hover {
+    border-color: #9c27b0;
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Wrapper da imagem */
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #2a2a2a;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- BADGE DE ESTOQUE (SÓ APARECE NO HOVER) --- */
+.badge-estoque {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(10, 10, 10, 0.85); 
+    color: #fff; 
+    font-size: 10px; 
+    font-weight: 600; 
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #6a1b9a;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+
+    /* O SEGREDO ESTÁ AQUI: forçando invisibilidade */
+    opacity: 0 !important; 
+    visibility: hidden;
+    transform: translateY(5px); 
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Forçando a aparição no hover com !important */
+.img-wrapper:hover .badge-estoque {
+    opacity: 1 !important; 
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.produto-card h3 {
+    font-size: 16px;
+    color: #f5f5f5;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.produto-card .preco {
+    font-family: 'Montserrat', sans-serif;
+    color: #9c27b0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: #4a148c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #9c27b0;
+    box-shadow: 0 0 10px #9c27b0;
+}
+
+/* Botão de Esgotado */
+.btn-esgotado {
+    display: inline-block;
+    background-color: #333;
+    color: #777;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    cursor: not-allowed;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #9c27b0;
+    width: auto;
+    padding: 12px 30px;
+}
+
+.btn-outline:hover {
+    background-color: #9c27b0;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #333;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .catalogo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
